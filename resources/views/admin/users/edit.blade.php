@@ -139,6 +139,7 @@
 
                         <div class="row">
                             <button class="btn btn-primary" type="submit">Enviar</button>
+                            <a class="btn btn-warning" href="{{ url()->previous() }}">Voltar</a>
                         </div>
 
                     </form>

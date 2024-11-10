@@ -17,26 +17,17 @@ class MedicamentoController extends Controller
         return view('admin.medicamentos.index', compact('medicamentos'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.medicamentos.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StoreMedicamentoRequest $request){
         Medicamento::create($request->validated());
         return redirect()->route('medicamentos.index')
                          ->with('success', 'Medicamento criado com sucesso!');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id){
         if (!$medicamento = Medicamento::find($id)) {
             return redirect()->route('medicamentos.index')->with('warning', 'Medicamento não localizado!');
@@ -44,9 +35,6 @@ class MedicamentoController extends Controller
         return view('admin.medicamentos.show', compact('medicamento'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id){
         if (!$medicamento = Medicamento::find($id)) {
             return redirect()->route('medicamentos.index')->with('warning', 'Medicamento não localizado!');
@@ -65,9 +53,6 @@ class MedicamentoController extends Controller
                 ->with('success', 'Medicamento atualizado com sucesso!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id){
         if (!$medicamento = Medicamento::find($id)) {
             return redirect()->route('medicamentos.index')->with('warning', 'Medicamento não localizado!');

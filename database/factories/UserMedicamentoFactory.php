@@ -18,7 +18,7 @@ class UserMedicamentoFactory extends Factory
     {
         return [
             'id_usuario' => fake()->numberBetween(1, 5),
-            'id_medicamento' => fake()->lastName(3, 6),
+            'id_medicamento' => fake()->numberBetween(1, 6),
             'tipo_dosagem' => fake()->randomElement(['gota','comprimido']),
             'qtd_dosagem' => fake()->numberBetween(1, 15),
             'horario' => fake()->time('H:i'),

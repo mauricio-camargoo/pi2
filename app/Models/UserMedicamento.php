@@ -15,5 +15,7 @@ class UserMedicamento extends Model
         'tipo_dosagem',
         'qtd_dosagem',
         'horario',
+        'data_inicial',
+        'data_final',
     ];
 }

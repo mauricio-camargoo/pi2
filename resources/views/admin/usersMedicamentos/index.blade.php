@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Lista Receitados') }} <a href="#" class="btn btn-success"><i class="fas fa-plus"></i></a>
+            {{ __('Lista Receitados') }} <a href="{{ route('usersmedicamentos.create') }}" class="btn btn-success"><i class="fas fa-plus"></i></a>
         </h2>
         <span>
             <x-alert/>
@@ -25,18 +25,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($dados as $usermedicamento)
+                            @foreach ($dados as $usermed)
                                 <tr>
-                                    <td>{{ $usermedicamento->id }}</td>
-                                    <td>{{ $usermedicamento->nome_usuario }}</td>
-                                    <td>{{ $usermedicamento->qtd_dosagem }} {{ $usermedicamento->tipo_dosagem }}</td>
-                                    <td>{{ $usermedicamento->data_inicial }}</td>
-                                    <td>{{ $usermedicamento->data_final }}</td>
+                                    <td>{{ $usermed->id }}</td>
+                                    <td>{{ $usermed->nome_usuario }}</td>
+                                    <td>{{ $usermed->nome_med }}</td>
+                                    <td>{{ $usermed->qtd_dosagem }} {{ $usermed->tipo_dosagem }}</td>
+                                    <td>{{ $usermed->data_inicial }}</td>
+                                    <td>{{ $usermed->data_final }}</td>
                                     <td>
-                                        <a href="#" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="{{ route('usersmedicamentos.edit', $usermed->id) }}" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                                        <a href="{{ route('usersmedicamentos.show', $usermed->id) }}" class="btn btn-primary"><i class="fas fa-eye"></i></a>
                                     </td>
                                 </tr>
                             @endforeach

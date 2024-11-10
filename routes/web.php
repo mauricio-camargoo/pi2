@@ -16,7 +16,13 @@ Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('users.e
 Route::post('/users', [UserController::class, 'store'])->name('users.store')->can('administrator');
 Route::get('/users', [UserController::class, 'index'])->name('users.index')->can('administrator');
 
-//Rotas Medicamentos Usuarios
+//Rotas Medicamentos X Usuários
+Route::get('/usersmedicamentos/create', [UserMedicamentoController::class, 'create'])->name('usersmedicamentos.create');
+Route::delete('/usersmedicamentos/{usermedicamento}/destroy', [UserMedicamentoController::class, 'destroy'])->name('usersmedicamentos.destroy');
+Route::get('/usersmedicamentos/{usermedicamento}', [UserMedicamentoController::class, 'show'])->name('usersmedicamentos.show');
+Route::put('/usersmedicamentos/{usermedicamento}', [UserMedicamentoController::class, 'update'])->name('usersmedicamentos.update');
+Route::get('/usersmedicamentos/{usermedicamento}/edit', [UserMedicamentoController::class, 'edit'])->name('usersmedicamentos.edit');
+Route::post('/usersmedicamentos', [UserMedicamentoController::class, 'store'])->name('usersmedicamentos.store')->can('administrator');
 Route::get('/usersmedicamentos', [UserMedicamentoController::class, 'index'])->name('usersmedicamentos.index')->can('administrator');
 
 //Rotas Medicamentos

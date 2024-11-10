@@ -100,7 +100,7 @@
 
                         <div class="row col-2">
                             <button class="btn btn-danger" type="submit">Deletar</button>
-                            <a href="{{ Route('users.index') }}" class="btn btn-warning" type="button">Cancelar</a>
+                            <a class="btn btn-warning" href="{{ url()->previous() }}">Voltar</a>
                         </div>
 
                     </form>
