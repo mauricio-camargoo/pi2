@@ -97,6 +97,10 @@ Gere a key do projeto Laravel
 php artisan key:generate
 ```
 
+Gere os dados para acesso
+```sh
+php artisan migrate --seed
+```
 
 Acesse o projeto
 [http://localhost:8989](http://localhost:8989)
