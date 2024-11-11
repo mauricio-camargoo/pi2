@@ -19,26 +19,26 @@
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                <input name="name" type="text" value="{{ $user->name }}" class="form-control">
+                                <input id="name" name="name" type="text" value="{{ $user->name }}" class="form-control">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                <input name="email" type="email" value="{{ $user->email }}" class="form-control">
+                                <input id="email" name="email" type="email" value="{{ $user->email }}" class="form-control">
                             </div>
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                <input name="password" type="password" value="" class="form-control">
+                                <input id="password" name="password" type="password" value="" class="form-control">
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-id-card"></i></span>
-                                <input name="cpf" type="text" value="{{ $user->cpf }}" class="form-control">
+                                <input id="cpf" name="cpf" type="text" value="{{ $user->cpf }}" class="form-control">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-id-card"></i></span>
-                                <input name="rg" type="text" value="{{ $user->rg }}" class="form-control">
+                                <input id="rg" name="rg" type="text" value="{{ $user->rg }}" class="form-control">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-lock"></i></span>
@@ -58,19 +58,19 @@
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-                                <input name="birthday" type="text" value="{{ $user->birthday }}" class="form-control">
+                                <input id="birthday" name="birthday" type="text" value="{{ $user->birthday }}" class="form-control">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-mobile"></i></span>
-                                <input name="phonecel" type="text" value="{{ $user->phonecel }}" class="form-control">
+                                <input id="phonecel" name="phonecel" type="text" value="{{ $user->phonecel }}" class="form-control">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                <input name="whatsapp" type="text" value="{{ $user->whatsapp }}" class="form-control">
+                                <input id="whatsapp" name="whatsapp" type="text" value="{{ $user->whatsapp }}" class="form-control">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                <input name="telegram" type="text" value="{{ $user->telegram }}" class="form-control">
+                                <input id="telegram" name="telegram" type="text" value="{{ $user->telegram }}" class="form-control">
                             </div>
                         </div>
                         <div class="row">

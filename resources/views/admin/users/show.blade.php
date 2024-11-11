@@ -19,82 +19,82 @@
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                <label for="">Nome:</label><span>{{ $user->name }}</span>
+                                <label style="padding: 0 10px;">Nome:</label><span>{{ $user->name }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                <label for="">E-mail:</label><span>{{ $user->email }}</span>
+                                <label style="padding: 0 10px;">E-mail:</label><span>{{ $user->email }}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-id-card"></i></span>
-                                <label for="">CPF:</label><span>{{ $user->cpf }}</span>
+                                <label style="padding: 0 10px;">CPF:</label><span>{{ $user->cpf }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-id-card"></i></span>
-                                <label for="">RG:</label><span>{{ $user->rg }}</span>
+                                <label style="padding: 0 10px;">RG:</label><span>{{ $user->rg }}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-                                <label for="">Data de Nascimento:</label><span>{{ $user->birthday }}</span>
+                                <label style="padding: 0 10px;">Data de Nascimento:</label><span>{{ $user->birthday }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-mobile"></i></span>
-                                <label for="">Celular:</label><span>{{ $user->phonecel }}</span>
+                                <label style="padding: 0 10px;">Celular:</label><span>{{ $user->phonecel }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                <label for="">Whatsapp:</label><span>{{ $user->whatsapp }}</span>
+                                <label style="padding: 0 10px;">Whatsapp:</label><span>{{ $user->whatsapp }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                <label for="">Telegram:</label><span>{{ $user->telegram }}</span>
+                                <label style="padding: 0 10px;">Telegram:</label><span>{{ $user->telegram }}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-map"></i></span>
-                                <label for="">CEP:</label><span>{{ $user->cep }}</span>
+                                <label style="padding: 0 10px;">CEP:</label><span>{{ $user->cep }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                                <label for="">Rua/Avenida/Tr:</label><span>{{ $user->logradouro }}</span>
+                                <label style="padding: 0 10px;">Rua/Avenida/Tr:</label><span>{{ $user->logradouro }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                                <label for="">Número:</label><span>{{ $user->numero }}</span>
+                                <label style="padding: 0 10px;">Número:</label><span>{{ $user->numero }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                                <label for="">Complemento:</label><span>{{ $user->complemento }}</span>
+                                <label style="padding: 0 10px;">Complemento:</label><span>{{ $user->complemento }}</span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                                <label for="">Bairro:</label><span>{{ $user->bairro }}</span>
+                                <label style="padding: 0 10px;">Bairro:</label><span>{{ $user->bairro }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                                <label for="">Cidade:</label><span>{{ $user->localidade }}</span>
+                                <label style="padding: 0 10px;">Cidade:</label><span>{{ $user->localidade }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                                <label for="">UF:</label><span>{{ $user->uf }}</span>
+                                <label style="padding: 0 10px;">UF:</label><span>{{ $user->uf }}</span>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                                <label for="">Estado:</label><span>{{ $user->estado }}</span>
+                                <label style="padding: 0 10px;">Estado:</label><span>{{ $user->estado }}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-globe-americas"></i></span>
-                                <label for="">Nome:</label><span>{{ $user->regiao }}</span>
+                                <label style="padding: 0 10px;">Nome:</label><span>{{ $user->regiao }}</span>
                             </div>
                         </div>
 

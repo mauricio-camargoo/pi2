@@ -28,7 +28,14 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->permission }}</td>
+                                    <td style="align-content: center;">
+                                        @if($user->permission === "usr")
+                                            <a class="btn btn-success"><i class="fas fa-user" style="color: rgb(235, 172, 77);font-size: larger"></i></a>
+                                        @elseif($user->permission === "adm")
+                                            <a class="btn" style="background: #000;"><i class="fas fa-user-tie" style="color: red;font-size: larger;"></i></a>
+                                        @endif
+
+                                    </td>
                                     <td>
                                         <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
                                     </td>

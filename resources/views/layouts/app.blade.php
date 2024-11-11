@@ -50,17 +50,17 @@
                     if(validacep.test(cep)) {
 
                         //Preenche os campos com "..." enquanto consulta webservice.
-                        $("#rua").val("...");
-                        $("#complemento").val("...");
-                        $("#bairro").val("...");
-                        $("#cidade").val("...");
-                        $("#uf").val("...");
-                        $("#estado").val("...");
-                        $("#regiao").val("...");
-                        $("#ibge").val("...");
-                        $("#gia").val("...");
-                        $("#ddd").val("...");
-                        $("#siafi").val("...");
+                        $("#rua").val("carregando...");
+                        $("#complemento").val("carregando...");
+                        $("#bairro").val("carregando...");
+                        $("#cidade").val("carregando...");
+                        $("#uf").val("carregando...");
+                        $("#estado").val("carregando...");
+                        $("#regiao").val("carregando...");
+                        $("#ibge").val("carregando...");
+                        $("#gia").val("carregando...");
+                        $("#ddd").val("carregando...");
+                        $("#siafi").val("carregando...");
 
                         //Consulta o webservice viacep.com.br/
                         $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
@@ -127,5 +127,82 @@
         </footer>
     </div>
 </body>
+<script>
+// Função para aplicar a máscara de Data (DD/MM/AAAA)
+function aplicarMascaraData(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+  if (value.length <= 2) {
+    value = value.replace(/(\d{2})(\d*)/, '$1/$2'); // Mascara no formato DD/
+  } else if (value.length <= 4) {
+    value = value.replace(/(\d{2})(\d{2})(\d*)/, '$1/$2/$3'); // Mascara no formato DD/MM/
+  } else {
+    value = value.replace(/(\d{2})(\d{2})(\d{4})/, '$1/$2/$3'); // Mascara no formato DD/MM/AAAA
+  }
+  input.value = value;
+}
 
+// Função para aplicar a máscara de RG
+function aplicarMascaraRG(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+  if (value.length <= 9) {
+    value = value.replace(/(\d{1,2})(\d{1,3})(\d{1,3})/, '$1.$2.$3'); // Mascara no formato XX.XXX.XXX
+  }
+  input.value = value;
+}
+
+// Função para aplicar a máscara de CPF
+function aplicarMascaraCPF(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+  if (value.length <= 11) {
+    value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1})/, '$1.$2.$3-$4'); // Mascara no formato XXX.XXX.XXX-XX
+  }
+  input.value = value;
+}
+
+// Função para aplicar a máscara de WhatsApp
+function aplicarMascaraWhatsApp(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+  if (value.length <= 11) {
+    value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3'); // Mascara (XX) XXXXX-XXXX
+  }
+  input.value = value;
+}
+
+// Função para aplicar a máscara de CEP
+function aplicarMascaraCEP(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+  if (value.length <= 5) {
+    value = value.replace(/(\d{5})(\d*)/, '$1-$2'); // Mascara no formato XXXXX-XXX
+  } else {
+    value = value.replace(/(\d{5})(\d{3})/, '$1-$2'); // Completa a máscara
+  }
+  input.value = value;
+}
+
+// Função para aplicar a máscara de Telefone
+function aplicarMascaraTelefone(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+  if (value.length <= 10) {
+    value = value.replace(/^(\d{2})(\d{4})(\d{4})$/, '($1) $2-$3'); // Mascara (XX) XXXX-XXXX
+  } else if (value.length === 11) {
+    value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3'); // Mascara (XX) XXXXX-XXXX
+  }
+  input.value = value;
+}
+
+// Aplicando as máscaras nos inputs
+document.getElementById('birthday').addEventListener('input', aplicarMascaraData);
+document.getElementById('rg').addEventListener('input', aplicarMascaraRG);
+document.getElementById('cpf').addEventListener('input', aplicarMascaraCPF);
+document.getElementById('whatsapp').addEventListener('input', aplicarMascaraWhatsApp);
+document.getElementById('cep').addEventListener('input', aplicarMascaraCEP);
+document.getElementById('phonecel').addEventListener('input', aplicarMascaraTelefone);
+
+</script>
 </html>

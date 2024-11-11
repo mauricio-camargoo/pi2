@@ -33,7 +33,7 @@ class UserController extends Controller
         return view('admin.users.edit', compact('user'));
     }
 
-    public function update(StoreMedicamentoRequest $request, string $id){
+    public function update(UpdateUserRequest $request, string $id){
         if (!$user = User::find($id)) {
             return back()->with('warning', 'Usuário não localizado!');
         }

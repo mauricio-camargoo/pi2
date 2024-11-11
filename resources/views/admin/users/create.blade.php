@@ -16,26 +16,26 @@
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                <input name="name" type="text" value="{{ old('name') }}" class="form-control" placeholder="Seu nome">
+                                <input id="name" name="name" type="text" value="{{ old('name') }}" class="form-control" placeholder="Seu nome">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                <input name="email" type="email" value="{{ old('email') }}" class="form-control" placeholder="Email">
+                                <input id="email" name="email" type="email" value="{{ old('email') }}" class="form-control" placeholder="Email">
                             </div>
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                <input name="password" type="password" value="{{ old('password') }}" class="form-control" placeholder="Senha">
+                                <input id="password" name="password" type="password" value="{{ old('password') }}" class="form-control" placeholder="Senha">
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-id-card"></i></span>
-                                <input name="cpf" type="text" value="{{ old('cpf') }}" class="form-control" placeholder="Seu CPF">
+                                <input id="cpf" name="cpf" type="text" value="{{ old('cpf') }}" class="form-control" placeholder="Seu CPF">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-id-card"></i></span>
-                                <input name="rg" type="text" value="{{ old('rg') }}" class="form-control" placeholder="Seu RG">
+                                <input id="rg" name="rg" type="text" value="{{ old('rg') }}" class="form-control" placeholder="Seu RG">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-lock"></i></span>
@@ -48,19 +48,19 @@
                         <div class="row">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-                                <input name="birthday" type="text" value="{{ old('birthday') }}" class="form-control" placeholder="Data de Nascimento">
+                                <input id="birthday" name="birthday" type="text" value="{{ old('birthday') }}" class="form-control" placeholder="Data de Nascimento">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-mobile"></i></span>
-                                <input name="phonecel" type="text" value="{{ old('phonecel') }}" class="form-control" placeholder="Celular">
+                                <input id="phonecel" name="phonecel" type="text" value="{{ old('phonecel') }}" class="form-control" placeholder="Celular">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                <input name="whatsapp" type="text" value="{{ old('whatsapp') }}" class="form-control" placeholder="Whatsapp">
+                                <input id="whatsapp" name="whatsapp" type="text" value="{{ old('whatsapp') }}" class="form-control" placeholder="Whatsapp">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                <input name="telegram" type="text" value="{{ old('telegram') }}" class="form-control" placeholder="Telegram">
+                                <input id="telegram" name="telegram" type="text" value="{{ old('telegram') }}" class="form-control" placeholder="Telegram">
                             </div>
                         </div>
                         <div class="row">
